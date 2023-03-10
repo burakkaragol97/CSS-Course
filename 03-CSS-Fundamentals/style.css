@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: #444;
+  border-top: 10px solid #1098ad;
+  position: relative;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  /* height: 80px; */
+}
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 500px;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #444;
+} */
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+#copyright {
+  font-size: 16px;
+}
+
+/* article header p {
+  font-style: italic;
+} */
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+/* li:first-child { */
+/* parent ın ilk child i olan li elemanlarını seçer */
+/* Burada dikkat edilmesi nokta, eğer li parent elementinin ilk childı değilse seçilemez. Seçilmesi için li'nin parentının ilk elemanı olması gerekir. */
+/* font-weight: bold; */
+/* } */
+
+/* li:last-child { */
+/* parent ın son child i olan li elemanlarını seçer */
+/* font-style: italic; */
+/* } */
+
+/* li:nth-child(2) { */
+/* parent ın belirtilen sıradaki child i olan li elemanlarını seçer */
+/* color: red; */
+/* } */
+
+/* li:nth-child(odd) {
+  /* Tek sayı olan elemanları seçer */
+/* color: black; */
+/* } */
+
+/* li:nth-child(even) { */
+/* Çift sayı olan elemanları seçer */
+/* color: blue; */
+/* } */
+
+/* Styling Links */
+
+/* href attribute'una ya da gerçekten link olan a etiketlerini seçme: */
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+/* Linkler için yazılan css rule'ları yukarıdaki şekildeki sırayla olmalıdır */
+
+.post-image {
+  width: 100%;
+  /* width: 100%; olması demek resmin bulunduğu containerın ya da elementin tamamını kaplaması demek responsive design için çok ama çok önemli. Site küçüldükçe ya da büyüdükçe resim belirttiğimiz miktarda yer kaplamaya devam edecek*/
+  height: auto;
+  /* width 800px olduğu için resmin aspect ratio'su bozuldu. Heigh özelliğini auto yaparak bu aspect ratio'yu düzelttik. Heigh, witdh'e göre ayarlandı. */
+}
+
+/* Sayfayı ya da bir elementi merkeze almak */
+
+/* Öncelikle bunun için elementin içinde hareket edebileceği bir containera sahip olması lazım ve bu containerın bir genişliği olması lazım.. Yeterli boşluk olması lazım. Genelde <div> kullanılır. */
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+nav a:link {
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+  /* display: inline-block; yapmamızın sebebi, margin-top vermemiz. Çünkü inline elementlerde sağdan ve soldan margin ya da padding verilir ancak üstten veya alttan margin veya padding verilemez. */
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+/* Resimler (img) aslında inline elemanlardır ancak inline-block gibi davranırlar */
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/* Adjacent Sibling selector kullandık. Anlamı h3'den sonra gelen p siblinklerini seç: */
+/* h3 + p::first-line {
+  color: red;
+} */
+
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
